@@ -12,14 +12,15 @@ fetch("travel_recommendation_api.json")
         data = jsonData;
 
      
-        if (window.location.pathname.includes("results.html")) {
+      if (window.location.pathname.includes("results.html")) {
 
-            const keyword = localStorage.getItem("searchKeyword");
+    const keyword = localStorage.getItem("searchKeyword");
 
-            if (keyword) {
-                showResults(keyword);
-            }
-        }
+    if (keyword) {
+        searchInput.value = keyword;
+        showResults(keyword);
+    }
+}
     });
 
 
